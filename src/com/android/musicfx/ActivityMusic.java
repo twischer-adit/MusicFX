@@ -233,11 +233,11 @@ public class ActivityMusic extends Activity implements OnSeekBarChangeListener {
         // Receive intent
         // get calling intent
         final Intent intent = getIntent();
-        mAudioSession = intent.getIntExtra(AudioEffect.EXTRA_AUDIO_SESSION,
-                AudioEffect.ERROR_BAD_VALUE);
+        mAudioSession = 0; /*intent.getIntExtra(AudioEffect.EXTRA_AUDIO_SESSION,
+                AudioEffect.ERROR_BAD_VALUE);*/
         Log.v(TAG, "audio session: " + mAudioSession);
 
-        mCallingPackageName = getCallingPackage();
+        //mCallingPackageName = getCallingPackage();
 
         // check for errors
         if (mCallingPackageName == null) {
